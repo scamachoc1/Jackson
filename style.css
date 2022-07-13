@@ -19,6 +19,12 @@
     --blue-5: #0e4959;
 
     --blue-6: #c8fdf7;
+
+    --cv-blue: #062448;
+    --cv-light-blue: #1b7fd7;
+    --powder-blue: #B0E0E6;
+
+    --lavender: #E6E6FA;
 }
 
 html {
@@ -35,6 +41,7 @@ h1 {
 h2 {
     font-size: 5rem;
     text-align: center;
+    color: var(--cv-light-blue);
 }
 
 h3 {
@@ -71,7 +78,7 @@ header {
 }
 
 nav {
-    padding: 0rem 5rem;
+    padding: 0rem 3rem;
     top: 0;
     left: 0;
 }
@@ -210,32 +217,38 @@ main::after {
 }
 
 .card:hover{
-    border: 2px solid var(--blue-3);
-    background: #EDF7F6;
+    border: 2px solid var(--cv-light-blue);
+    /*background: #EDF7F6;*/
+    background: var(--lavender);
     cursor: pointer;
-    transition: background .3s;
+    transition: background .25s;
+}
+.card:hover > h6, 
+.card:hover > h3{
+    color: var(--cv-light-blue);
+    transition: all .25s;
 }
 /*FOOTER*/
 
 footer {
     position: sticky;
     bottom: 0;
-    background: var(--blue-4);
+    background: var(--cv-blue);
 }
 
 footer a {
     text-decoration: none;
-    color: var(--blue-3);
+    color: var(--cv-light-blue);
     font-size: 2rem;
 }
 
 footer li:hover {
 
-    background: var(--blue-5);
-    transition: all .3s;
+    background: var(--cv-light-blue);
+    color: var(--cv-blue);
 }
 
 footer a:hover {
 
-    color: var(--blue-1);
+    color: var(--cv-blue);
 }
