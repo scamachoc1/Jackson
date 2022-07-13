@@ -36,6 +36,7 @@ html {
 /*FONT STYLES*/
 h1 {
     font-size: 8rem;
+    color: var(--cv-light-blue);
 }
 
 h2 {
@@ -127,13 +128,13 @@ main {
 
     position: relative;
 
-    min-height: 100vh;
-
     padding: 3rem;
 }
-main > div{
-    margin-bottom: 15rem;
+
+main>div {
+    margin-bottom: 10rem;
 }
+
 main::after {
     content: "";
     background: url('./assets/bg-test-2.jpg');
@@ -151,11 +152,11 @@ main::after {
 #home {
     display: flex;
     align-items: center;
-    min-height: 100vh;
 }
 
 #home img {
     border-radius: 50%;
+    border: 2px solid var(--cv-light-blue);
     width: 50%;
 }
 
@@ -175,18 +176,18 @@ main::after {
 
 
 /*EXPERIENCE*/
-#experience{
+#experience {
     display: flex;
     flex-direction: column;
-
-    max-height: 100vh;
 }
-#experience #cards{
+
+#experience #cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.card{
+
+.card {
     border: 1px solid var(--blue-3);
     border-radius: 1rem;
 
@@ -196,59 +197,102 @@ main::after {
     display: flex;
     flex-direction: column;
 
-    margin: 3rem 1rem ;
+    margin: 3rem 1rem;
     padding: 3rem;
 }
-.card h3{
+
+.card h3 {
     text-align: center;
 
     color: var(--blue-4);
 }
-.card ul{
+
+.card ul {
     margin: auto 0;
 }
-.card ul li{
+
+.card ul li {
     font-size: 2rem;
 }
-.card h6{
+
+.card h6 {
     text-align: center;
     color: var(--blue-5);
     margin-top: 1rem;
 }
 
-.card:hover{
+.card:hover {
     border: 2px solid var(--cv-light-blue);
     /*background: #EDF7F6;*/
     background: var(--lavender);
     cursor: pointer;
     transition: background .25s;
 }
-.card:hover > h6, 
-.card:hover > h3{
+
+.card:hover>h6,
+.card:hover>h3 {
     color: var(--cv-light-blue);
     transition: all .25s;
 }
+
+/*ALT-EXPERIENCE*/
+#alt-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#alt-experience .card {
+    text-align: center;
+}
+
 /*FOOTER*/
 
 footer {
     position: sticky;
     bottom: 0;
-    background: var(--cv-blue);
+    background: var(--cv-light-blue);
 }
 
 footer a {
     text-decoration: none;
-    color: var(--cv-light-blue);
+    color: white;
     font-size: 2rem;
+    margin: 0 1rem;
 }
 
 footer li:hover {
-
-    background: var(--cv-light-blue);
-    color: var(--cv-blue);
+    background: var(--cv-blue);
 }
 
-footer a:hover {
+footer a:hover,
+footer li:hover {
+    color: var(--cv-light-blue);
+    transition: all .3s;
+}
 
-    color: var(--cv-blue);
+@media screen and (max-width: 1000px){
+    html{
+        font-size: 6px;
+    }
+    h1{
+        text-align: center;
+    }
+    main{
+        padding: 0;
+    }
+    main>div{
+        margin: 0;
+    }
+    #home {
+        flex-direction: column;
+        min-height: none;
+        margin-bottom: 5rem;
+    }
+    #home .wrapper {
+        max-width: 80%;
+        text-align: center;
+        margin: 0;
+
+    }
 }
