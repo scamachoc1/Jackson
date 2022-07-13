@@ -1,0 +1,189 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /*font-family: 'Roboto', sans-serif;*/
+
+    font-family: 'Raleway', sans-serif;
+
+    --blue-1: #0ffff7;
+    --blue-2: #06ded5;
+    --blue-3: #0a9aa0;
+    --blue-4: #0d6977;
+    --blue-5: #0e4959;
+
+    --blue-6: #c8fdf7;
+}
+
+html {
+    font-size: 12px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/*FONT STYLES*/
+h1 {
+    font-size: 8rem;
+}
+
+h2 {
+    font-size: 5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 3rem;
+}
+
+/*GENERAL RULES*/
+ul {
+    list-style: none;
+}
+
+body {
+    position: relative;
+}
+
+/*HEADER*/
+header {
+    background: var(--blue-5);
+    color: var(--blue-1);
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+nav {
+    padding: 0rem 5rem;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+
+nav a {
+    margin: 3rem;
+}
+
+
+
+header a {
+    text-decoration: none;
+    color: var(--blue-1);
+    font-size: 2rem;
+}
+
+header li:hover {
+
+    background: var(--blue-1);
+    transition: all .3s;
+}
+
+header a:hover {
+
+    color: var(--blue-5);
+}
+
+/*MAIN*/
+main {
+    /*
+    background: var(--blue-6);*/
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 3rem;
+}
+main::after {
+    content: "";
+    background: url('./assets/bg-test-2.jpg');
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/*Home*/
+
+#home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#home img {
+    border-radius: 50%;
+    width: 50%;
+}
+
+#home .wrapper {
+    width: 100%;
+    margin-left: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#home .wrapper h1 {
+    margin-bottom: 3rem;
+}
+
+/*FOOTER*/
+
+footer {
+    position: sticky;
+    bottom: 0;
+    background: var(--blue-4);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--blue-3);
+    font-size: 2rem;
+}
+
+footer li:hover {
+
+    background: var(--blue-5);
+    transition: all .3s;
+}
+
+footer a:hover {
+
+    color: var(--blue-1);
+}
