@@ -127,15 +127,19 @@ main {
     background: var(--blue-6);*/
 
     position: relative;
-
-    padding: 3rem;
 }
 
 main>div {
     margin-bottom: 10rem;
 }
 
-main::after {
+
+.wrapper {
+    max-width: 95%;
+    margin: auto;
+}
+
+body::after {
     content: "";
     background: url('./assets/bg-test-2.jpg');
     opacity: 0.3;
@@ -149,7 +153,7 @@ main::after {
 
 /*Home*/
 
-#home {
+#home .wrapper {
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -161,17 +165,11 @@ main::after {
     width: 50%;
 }
 
-#home .wrapper {
-    width: 100%;
+#home .wrapper .wrapper-2 {
     margin-left: 10rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
 }
 
-#home .wrapper h1 {
+#home .wrapper-2 h1 {
     margin-bottom: 3rem;
 }
 
@@ -237,15 +235,225 @@ main::after {
 }
 
 /*ALT-EXPERIENCE*/
-#alt-experience {
+#alt-experience .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#alt-experience .card {
+#alt-experience .wrapper .card {
     text-align: center;
 }
+
+/*WRAPPER*/
+
+/*CONTENIDO*/
+#social {
+    position: relative;
+    height: 100vh;
+}
+
+#social .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+#social .left-side {
+    max-width: 50%;
+    padding: 3rem;
+}
+
+#social .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 50%;
+}
+
+#social .section {
+    border: 2px solid var(--cv-light-blue);
+    border-radius: 2rem;
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+    margin: 1.5rem 0rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#social .section:hover {
+    border: 2px solid var(--cv-light-blue);
+    /*background: #EDF7F6;*/
+    background: var(--lavender);
+    cursor: pointer;
+    transition: background .25s;
+}
+
+#social .section:hover>h3 {
+
+    color: var(--cv-light-blue);
+    transition: all .25s;
+}
+
+/*OVERLAY*/
+.overlay {
+    background: rgba(0, 0, 0, .35);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: none;
+
+    transition: all 1s;
+
+    overflow: hidden;
+}
+
+.overlay .close-btn i {
+    cursor: pointer;
+
+    font-size: 5rem;
+    color: var(--cv-light-blue);
+
+    position: absolute;
+    top: 0;
+    right: 2.5rem
+}
+
+.overlay .content > div{
+    display: none;
+}
+
+.toggle-content{
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+
+    color: white;
+    background: #000;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/*
+
+
+.deportes_content {
+    display: none;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cultura_content {
+    display: none;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.politica_content {
+    display: none;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.historia_content {
+    display: none;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.notasdecafe_content {
+    display: none;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}*/
 
 /*FOOTER*/
 
@@ -272,28 +480,34 @@ footer li:hover {
     transition: all .3s;
 }
 
-@media screen and (max-width: 1000px){
-    html{
+@media screen and (max-width: 1000px) {
+    html {
         font-size: 6px;
     }
-    h1{
+
+    h1 {
         text-align: center;
     }
-    main{
+
+    main {
         padding: 0;
     }
-    main>div{
+
+    main>div {
         margin: 0;
     }
-    #home {
+
+    #home .wrapper {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    #home .wrapper {
+
+    #home .wrapper-2 {
         max-width: 80%;
         text-align: center;
         margin: 0;
+        margin-bottom: 5rem;
 
     }
 }
