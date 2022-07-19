@@ -152,6 +152,7 @@ main::after {
 #home {
     display: flex;
     align-items: center;
+    min-height: 100vh;
 }
 
 #home img {
@@ -286,8 +287,8 @@ footer li:hover {
     }
     #home {
         flex-direction: column;
-        min-height: none;
-        margin-bottom: 5rem;
+        align-items: center;
+        justify-content: center;
     }
     #home .wrapper {
         max-width: 80%;
